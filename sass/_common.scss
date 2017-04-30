@@ -1,0 +1,46 @@
+h1.img {}
+h6 {
+    font-size: 18px;
+    margin: 0;
+    padding: 20px 0;
+}
+h4 {
+    
+    padding: 10px 0;
+    text-align: center;
+    margin: 0;
+}
+p{
+    font-size: 16px;
+    opacity: 0.5;
+    padding: 15px 0;
+    margin: 0;
+}
+a.link{
+    // @include HelveticaNeueBold(15px);
+    text-decoration: none;
+    border-bottom: 4px #b61a34 solid;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    display: inline-block;
+    &:hover {
+        color: #86a6da;
+    }
+}
+.buttonStyle {
+    @include buttonstyle(328px);
+    float: right;
+    &.blue {
+        background-color: $color-main;
+        color: #fff;
+        float: left;
+        &:hover {
+            background-color: $color-blue-hover;
+            color: #fff;
+        }
+    }
+    &:hover {
+        background-color: $color-grey-hover;
+        color: $color-main;
+    }
+}

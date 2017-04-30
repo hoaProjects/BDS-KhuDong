@@ -1,0 +1,54 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $color-main;
+  
+  min-width: $minwidth;
+
+}
+/*body {
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}*/
+
+a {
+  color: $color-main;
+}
+
+/* visible mobile */
+.Desktop .visible-mobile {
+  display: none !important;
+}
+
+.Mobile .visible-mobile {
+  display: block !important;
+}
+
+hr {
+  border-color: #F05F40;
+  border-width: 3px;
+  max-width: 50px;
+}
+hr.light {
+  border-color: white;
+}
+
+a:hover,
+a:focus {
+  color: #eb3812;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+p {
+  font-size: $font-content;
+  line-height: 1.5;
+}
