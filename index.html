@@ -5,24 +5,80 @@
         <meta name="viewport" content="width=640">
         <title>Bất động sản khu đông </title>
         <link href="css/all.css" rel="stylesheet">
-        <script src="js/lib/jquery-1.11.1.min.js"></script> 
+        <!--<script src="js/lib/jquery-1.11.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="js/lib/slick/slick.js"></script> 
         <script> 
             $(function(){
               $("#includedContent").load("modules/includes/header.html"); 
             });
         </script> 
+        <style type="text/css">
+            html, body {
+              margin: 0;
+              padding: 0;
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+          </style>
     </head>
     <body class="Bds-Page">
         <header class="Bds-Page" id="includedContent"></header>
+        <!-- secctiob banner -->
+        <section class="banner-slider center slider" data-sizes="100%">
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+        </section>
+      <!--slider project hot-->
+        <section class="sec-hotproduct">
+            <div class="label-hot">
+                <img src="img/label-hot.png" alt="">
+            </div>
+
+            <div class="padd-hot">
+                <div class="border-hot">
+                    <div class="col-sm-3">
+                        <img src="img/hot01.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                        <img src="img/bong.png" alt="Cinque Terre">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="img/hot02.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                        <img src="img/bong.png" alt="Cinque Terre">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="img/hot03.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                        <img src="img/bong.png" alt="Cinque Terre">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="img/hot04.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                        <img src="img/bong.png" alt="Cinque Terre">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-hot">
+            project-hot
+        </section>
         <section class="container">
-            <!--banner-slider-->
-            <section class="banner-slider">
-                banner-slider
-            </section>
-            <!--slider project hot-->
-            <section class="project-hot">
-                project-hot
-            </section>
+            
             <!--search-->
             <section class="sec-search">
                 search
@@ -44,6 +100,11 @@
         jQuery.each(includes, function(){
           var file = 'views/' + $(this).data('include') + '.html';
           $(this).load(file);
+        });
+        $(".center").slick({
+            dots: true,
+            infinite: true,
+            lazyLoad: 'ondemand', // ondemand progressive anticipated
         });
       });
     </script>
