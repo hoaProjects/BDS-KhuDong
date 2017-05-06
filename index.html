@@ -5,10 +5,15 @@
         <meta name="viewport" content="width=640">
         <title>Bất động sản khu đông </title>
         <link href="css/all.css" rel="stylesheet">
+        <script src="js/lib/jquery-1.11.1.min.js"></script> 
+        <script> 
+            $(function(){
+              $("#includedContent").load("modules/includes/header.html"); 
+            });
+        </script> 
     </head>
-    <body>
-    <main>
-        <header>Header</header>
+    <body class="Bds-Page">
+        <header class="Bds-Page" id="includedContent"></header>
         <section class="container">
             <!--banner-slider-->
             <section class="banner-slider">
@@ -33,4 +38,13 @@
         </section>
         <footer>footer</footer>
     </body>
+    <script>
+      $(function(){
+        var includes = $('[data-include]');
+        jQuery.each(includes, function(){
+          var file = 'views/' + $(this).data('include') + '.html';
+          $(this).load(file);
+        });
+      });
+    </script>
 </html>
