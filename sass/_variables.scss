@@ -148,7 +148,21 @@ MIXIN=====================*/
                                   not supported by any browser */
 }
 
-
+@mixin button_blue ($width:98%, $height: 46px){
+	background: #379201; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #379201, #4faa02); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #379201, #4faa02); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #379201, #4faa02); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(right, #379201, #4faa02); /* Standard syntax */
+    border-radius: 5px;
+    height: $height;
+    line-height: auto;
+    display: block;
+    padding: 0px 12px;
+    color: #fff;
+    margin: 9px 0;
+    width: $width;
+ }
 @mixin skewText {
 
 }

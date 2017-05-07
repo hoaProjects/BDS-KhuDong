@@ -1,0 +1,40 @@
+.sec-search {
+	.col-sm-2 { 
+		width: 20% ; 
+		float: left; 
+		padding: 0px 15px;
+			button {
+				@include button_blue ;
+				text-align: left;
+				@include RobotoRegular (15px) ;
+				&:before {
+					content: "";
+		            background: #379201 url(../img/item.png) no-repeat left center;
+		            width: 20px;
+		            height: 20px;
+		            float: left;
+		            margin-right: 12px;
+				}
+		}
+	}
+	.col-sm-8 {
+		width: 60%; 
+		float: left;
+		padding: 0px 15px;
+		button {
+			@include button_blue(auto, 35px);
+			text-align: center;
+			@include RobotoRegular (15px) ;
+			@include borderCorner (20px) ;
+			padding: 5px 24px;
+			margin: 9px auto;
+			border: none;
+		}
+	}
+	.input_sec {
+	    @include inputstyle( 47%);
+	    margin: 1%;
+	    @include RobotoRegularItalic (15px) ;
+		color: $color-grey;
+	}
+}
