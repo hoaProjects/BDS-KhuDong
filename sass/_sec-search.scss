@@ -6,7 +6,7 @@
 			button {
 				@include button_blue ;
 				text-align: left;
-				@include RobotoRegular (15px) ;
+				@include RobotoRegular (15px, 1.5) ;
 				&:before {
 					content: "";
 		            background: #379201 url(../img/item.png) no-repeat left center;
@@ -25,7 +25,7 @@
 			@include button_blue(auto, 35px);
 			text-align: center;
 			@include RobotoRegular (15px) ;
-			@include borderCorner (20px) ;
+			@include boderRadius (20px) ;
 			padding: 5px 24px;
 			margin: 9px auto;
 			border: none;
@@ -35,6 +35,50 @@
 	    @include inputstyle( 47%);
 	    margin: 1%;
 	    @include RobotoRegularItalic (15px) ;
-		color: $color-grey;
+	}
+	.support {
+		@include bg_gradient(#faea7a, #fffead);
+		@include boderRadius (10px) ;
+		width: 16%;
+		border: 1px #dfdfdf solid;
+		position: relative;
+		.bg_support{
+			position: absolute;
+			bottom: 0;
+			img {
+				vertical-align: bottom;
+			}
+		}
+		.detail {
+			padding: 5px 0px 0px;
+			display: table;
+			width: 100%;
+			&:last-child {
+				padding-bottom: 5px;
+			}
+			.bg_phone_number{
+				background: url(../img/phone_number.png) no-repeat left center;
+				width: 108px;
+				height: 23px;
+				text-align: center;
+				display: table-cell;
+    			vertical-align: middle;
+				span {
+					color: #f68c83;
+					@include RobotoRegular (15px, 1.5) ;
+					letter-spacing: 1.5px;
+
+				}
+			}
+			span {
+				@include RobotoRegular (16px, 1.5) ;
+				color: $color-red;
+				&.left_text {
+					color: #000;
+					float: left;
+					margin-right: 15px;
+				}
+			}
+		}
 	}
 }
