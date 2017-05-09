@@ -5,22 +5,136 @@
         <meta name="viewport" content="width=640">
         <title>Bất động sản khu đông </title>
         <link href="css/all.css" rel="stylesheet">
+        <!--<script src="js/lib/jquery-1.11.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="js/lib/slick/slick.js"></script> 
+        <script> 
+            $(function(){
+              $("#includedContent").load("modules/includes/header.html"); 
+            });
+        </script> 
+        <style type="text/css">
+            html, body {
+              margin: 0;
+              padding: 0;
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+          </style>
     </head>
-    <body>
-    <main>
-        <header>Header</header>
-        <section class="container">
-            <!--banner-slider-->
-            <section class="banner-slider">
-                banner-slider
-            </section>
-            <!--slider project hot-->
-            <section class="project-hot">
-                project-hot
-            </section>
-            <!--search-->
-            <section class="sec-search">
-                search
+    <body class="Bds-Page">
+        <header class="Bds-Page" id="includedContent"></header>
+        <!-- secctiob banner -->
+        <section class="banner-slider center slider" data-sizes="100%">
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+            <div>
+              <img src="img/bg_section01.jpg">
+            </div>
+        </section>
+      <!--slider project hot-->
+        <section class="sec-hotproduct">
+            <div class="label-hot">
+                <img src="img/label-hot.png" alt="">
+            </div>
+            <div class="padd-hot">
+                <div class="border-hot">
+                   <div class="regular slider">
+                      <div class="col-sm-3">
+                          <img src="img/hot01.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                          <img src="img/bong.png" alt="Cinque Terre">
+                      </div>
+                      <div class="col-sm-3">
+                          <img src="img/hot02.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                          <img src="img/bong.png" alt="Cinque Terre">
+                      </div>
+                      <div class="col-sm-3">
+                          <img src="img/hot03.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                          <img src="img/bong.png" alt="Cinque Terre">
+                      </div>
+                      <div class="col-sm-3">
+                          <img src="img/hot04.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                          <img src="img/bong.png" alt="Cinque Terre">
+                      </div>
+                      <div class="col-sm-3">
+                          <img src="img/hot01.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                          <img src="img/bong.png" alt="Cinque Terre">
+                      </div>
+                      <div class="col-sm-3">
+                          <img src="img/hot02.jpg" class="img-rounded img-border" alt="Cinque Terre">
+                          <img src="img/bong.png" alt="Cinque Terre">
+                      </div>
+                    </div>
+                </div>
+                   
+            </div>
+             
+        </section>
+
+        <!--search-->
+        <section class="sec-search">
+            <div class="col-sm-2">
+                <button>Nhà đất bán</button>
+                <button>Cho thuê</button>
+                <button>Dự án</button>
+                <button>Doanh nghiệp</button>
+            </div>
+            <div class="col-sm-8">
+                <input type="text" name="" class="input_sec" placeholder="Nhập từ khoá tìm kiếm" />
+                <input type="text" name="" class="input_sec" placeholder="Chọn Tỉnh/Tp" />
+                <input type="text" name="" class="input_sec" placeholder="Chọn diện tích" />
+                <input type="text" name="" class="input_sec" placeholder="Loại bất dộng sản" />
+                <input type="text" name="" class="input_sec" placeholder="Chọn Quần/Huyện" />
+                <input type="text" name="" class="input_sec" placeholder="Chọn giá tiền" />
+                <button>Tìm kiếm</button>
+            </div>
+            <div class= "col-sm-2 support">
+                <div class= "bg_support">
+                    <img src = "../img/bg_support.png" />
+                </div>
+                <div class= "detail">
+                    <img src= "../img/phone.png">
+                    <article class="bg_phone_number"><span>0946464868</span></article>
+                </div>
+                <div class= "detail">
+                    <article>
+                        <span class="left_text">A.Toàn</span>
+                        <span>0946464868</span>
+                    </article>
+                </div>
+                <div class= "detail">
+                    <img src= "../img/skype.png">
+                    <img src= "../img/online.png" style="margin-left: 10px;">
+                </div>
+                <div class= "detail">
+                    <article>
+                        <span class="left_text">A.Thanh</span>
+                        <span>0946464868</span>
+                    </article>
+                </div>
+                <div class= "detail">
+                    <img src= "../img/skype.png">
+                    <img src= "../img/online.png" style="margin-left: 10px;">
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="clear: both;">
             </section>
             <!--slider-product hot-->
             <section class="product-hot">
@@ -33,4 +147,23 @@
         </section>
         <footer>footer</footer>
     </body>
+    <script>
+      $(function(){
+        var includes = $('[data-include]');
+        jQuery.each(includes, function(){
+          var file = 'views/' + $(this).data('include') + '.html';
+          $(this).load(file);
+        });
+        $(".center").slick({
+            dots: true,
+            infinite: true,
+            lazyLoad: 'ondemand', // ondemand progressive anticipated
+        });
+        $(".regular").slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4
+        });
+      });
+    </script>
 </html>

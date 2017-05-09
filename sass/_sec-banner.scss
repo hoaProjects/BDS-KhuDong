@@ -1,0 +1,70 @@
+ /*==================sec-banner=======================*/
+ .sec-banner{
+     background: url(../img/bg_section01.jpg) no-repeat;
+     width: 100%;
+     height: 392px;
+ }
+ .banner-slider {
+ 	&.slider {
+        width: 100%;
+        margin: 6px auto;
+        margin-bottom: 0px !important;
+    }
+
+    &.slick-slide {
+	    margin: 0px 0px;
+		img {
+			width: 100%;
+		}
+    }
+    .slick-prev{
+			left: 11px;
+    		z-index: 100;
+    		background: url(../img/prev.png) no-repeat;
+    		width: 35px;
+    		height: 50px;
+			&:before {
+				background: url(../img/prev.png) no-repeat;
+				font-size: 0px;
+			}
+			&:hover {
+		        background: url(../img/prev.png) no-repeat;
+		    }
+	}
+	.slick-next{
+		z-index: 100;
+    	background: url(../img/next.png) no-repeat;
+    	width: 35px;
+    	height: 50px;
+    	right: 11px;
+		&:before {
+			background: url(../img/next.png) no-repeat;
+			font-size: 0px;
+		}
+		&:hover {
+	        background: url(../img/next.png) no-repeat;
+	    }
+	}
+	.slick-dots {
+		width: 17%;
+	    right: 0px;
+	    bottom: 7px;
+		li {
+			button {
+				background: url(../img/dot_blue.png) no-repeat;
+				width: 20px;
+				height: 20px;
+				&:before {
+					content: "";
+				}
+			}
+			&.slick-active {
+				 button {
+					background: url(../img/dot_black.png) no-repeat;
+					width: 20px;
+					height: 20px;
+				 }
+			 }
+		}
+	}
+ }
