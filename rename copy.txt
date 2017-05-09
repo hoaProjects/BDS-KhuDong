@@ -1,3 +1,0 @@
-D:
-cd D:\Bliss-interactive\HEARTS\source
-sass -t compressed --watch --scss --sourcemap sass:css
