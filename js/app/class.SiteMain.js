@@ -5,6 +5,7 @@ var SiteMain = (function() {
 	function init(){
 		setupSliderBanner();
 		selectbox();
+		menu();
     }
 	function setupSliderBanner(){
 		$(".single-item").slick({
@@ -13,6 +14,7 @@ var SiteMain = (function() {
             lazyLoad: 'ondemand', // ondemand progressive anticipated
         });
 		$('.multiple-items').slick({
+			  dots: false,
 			  infinite: true,
 			  speed: 300,
 			  slidesToShow: 4,
@@ -28,17 +30,19 @@ var SiteMain = (function() {
 			      }
 			    },
 			    {
-			      breakpoint: 600,
+			      breakpoint: 640,
 			      settings: {
 			        slidesToShow: 2,
-			        slidesToScroll: 2
+			        slidesToScroll: 2,
+					dots: false
 			      }
 			    },
 			    {
 			      breakpoint: 480,
 			      settings: {
 			        slidesToShow: 1,
-			        slidesToScroll: 1
+			        slidesToScroll: 1,
+					dots: false
 			      }
 			    }
 			    // You can unslick at a given breakpoint now by adding:
@@ -62,11 +66,12 @@ var SiteMain = (function() {
 				      }
 				    },
 				    {
-				      breakpoint: 600,
-				      settings: {
-				        slidesToShow: 2,
-				        slidesToScroll: 2
-				      }
+					  breakpoint: 640,
+  				      settings: {
+  				        slidesToShow: 2,
+  				        slidesToScroll: 2,
+  						dots: false
+  				      }
 				    },
 				    {
 				      breakpoint: 480,
@@ -80,6 +85,18 @@ var SiteMain = (function() {
 				    // instead of a settings object
 				  ]
 		});
+	}
+	function menu(){
+		$('.topMobile .icon').click(function(e){
+			// if(!$(this).hasClass('active')) {
+			// 	$('header .container .navbar-nav').slideDown();
+			// }
+			// else {
+			// 	$('header .container .navbar-nav').slideUp();
+			// }
+			$('header .container .navbar-nav').toggle();
+		})
+
 	}
 	function selectbox(){
 		$('.sec-search .select').click(function(e){

@@ -1,1 +1,65 @@
+footer {
+	background: #a0a0a0 url(../img/bg-footer.png) repeat-x left top;
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	.inner {
+		padding-left: 30px;
+		float: left;
+		padding: 10px 30px;
 
+	}
+	.map {
+		float: right;
+		padding-right: 30px;
+		padding-top: 15px;
+	}
+	h4 {
+       color: $color-red;
+       text-align: left;
+	   font-size: 20px;
+    }
+    p{
+       font-size: 16px;
+       line-height: 1;
+       padding: 5px 0;
+       color: #000;
+    }
+	.bottom {
+		height: 30px;
+		background: #767676;
+		clear: both;
+		p{
+			color: #fff;
+			@include RobotoRegular(12px,30px);
+			text-align: right;
+			padding: 0;
+			margin: 0;
+			padding-right: 30px;
+		}
+	}
+}
+.paging {
+	clear: both;
+	@include boderRadius (3px);
+	background: #f1f0f0;
+	height: 32px;
+	border: 1px #ccc solid;
+	width: 300px;
+	margin: 50px auto;
+	a {
+		display: block;
+		float: left;
+		padding: 0px 20px;
+		border-right: 1px #ccc solid;
+		@include RobotoRegular(18px,32px);
+		color: #333;
+		text-decoration: none;
+		&:last-child {
+			border-right: 0;
+		}
+		&:hover {
+			color: $color-red;
+		}
+	}
+}

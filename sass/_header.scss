@@ -11,6 +11,7 @@ header {
         padding-left: 0px;
         margin-right: auto;
         margin-left: auto;
+		width: 1062px;
         &:before {
             display: table;
             content: "";
@@ -27,6 +28,23 @@ header {
             height: 41px;
             float: right;
         }
+		.topMobile {
+			display: none;
+			h3 {
+				@include RobotoBold(18px,0.5);
+				float: left;
+				padding-left: 15px;
+				color: #fff;
+			}
+			.icon {
+				float: right;
+				width: 32px;
+				height: 24px;
+				display: block;
+				background: url(../img/menu-icon.png) no-repeat right top;
+				margin: 8px 15px 0 0;
+			}
+		}
         .navbar-nav {
             float: left;
             margin-top: 0px;

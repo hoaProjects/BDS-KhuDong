@@ -6,7 +6,7 @@ body {
   padding: 0;
   color: $color-main;
   @include RobotoRegular (16px);
-  min-width: $minwidth;
+  min-width: 480px;
 }
 /*body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;

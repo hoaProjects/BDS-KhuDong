@@ -7,7 +7,7 @@
 		button {
 			@include button_blue() ;
 			@include shadow();
-			
+
 		}
 	}
 	.col-sm-8 {
@@ -73,6 +73,7 @@
 		width: 16%;
 		border: 1px #dfdfdf solid;
 		position: relative;
+		margin-top: 8px;
 		.bg_support{
 			background: url(../img/bg_support.png) no-repeat left bottom;
 			padding: 10px 0;
