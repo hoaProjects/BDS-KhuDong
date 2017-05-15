@@ -8,20 +8,22 @@
      }
      .content {
          clear: both;
-         padding: 1%;
+
      }
      .item-product {
          border-bottom: 1px #dedbdb solid;
          clear: both;
          overflow: hidden;
-         padding: 20px 0;
+         padding: 20px 1%;
+         width: 100%;
          .img-view {
              float: left;
              background: #f1f0f0;
              border: 1px #dedbdb solid;
              @include boderRadius(5px);
              padding: 10px;
-             margin-right: 25px;
+             margin-right: 2%;
+             width: 25%;
              img {
                  max-width: 100%;
                  display: block;
@@ -29,6 +31,7 @@
          }
          .info {
              float: left;
+             width: 71%;
              h5 {
                  @include RobotoBold(18px);
                  margin: 0;
