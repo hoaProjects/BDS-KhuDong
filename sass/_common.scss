@@ -5,15 +5,13 @@ h6 {
     padding: 20px 0;
 }
 h4 {
-    
+
     padding: 10px 0;
     text-align: center;
     margin: 0;
 }
 p{
-    font-size: 16px;
-    opacity: 0.5;
-    padding: 15px 0;
+    padding: 0;
     margin: 0;
 }
 a.link{
@@ -27,20 +25,83 @@ a.link{
         color: #86a6da;
     }
 }
-.buttonStyle {
-    @include buttonstyle(328px);
-    float: right;
-    &.blue {
-        background-color: $color-main;
-        color: #fff;
+.title-lable {
+    .btn-green {
+        display: block;
+        background: url(../img/btn-left.png) no-repeat left top;
+        width: 267px;
+        height: 45px;
         float: left;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        z-index: 2;
+        @include animate(0.3s);
         &:hover {
-            background-color: $color-blue-hover;
-            color: #fff;
+
+        }
+        span {
+             display: block;
+             @include RobotoRegular (16px,42px) ;
+             width: 204px;
+             float: left;
+        }
+        &:before {
+            content: "";
+    		background: url(../img/item.png) no-repeat left center;
+    		width: 20px;
+    		height: 20px;
+    		float: left;
+    		margin: 10px;
+        }
+        &:after {
+            content: "";
+    		background: url(../img/btn-right.png) no-repeat left top;
+    		width: 23px;
+    		height: 45px;
+    		float: left;
+        }
+
+
+    }
+    .btn-red {
+        display: block;
+        background: url(../img/btn-red-left.png) no-repeat left top;
+        width: 161px;
+        height: 45px;
+        float: left;
+        color: #fff;
+        text-decoration: none;
+        margin-left: -10px;
+        position: relative;
+        margin-left: -18px;
+        @include animate(0.3s);
+        z-index: 1;
+        span {
+            display: block;
+            @include RobotoRegular (16px,42px) ;
+            width: 90px;
+            float: left;
+            padding-left: 39px;
+        }
+        &:after {
+            content: "";
+    		background: url(../img/btn-red-right.png) no-repeat left top;
+    		width: 32px;
+    		height: 45px;
+    		float: left;
+        }
+        &:hover {
+
         }
     }
-    &:hover {
-        background-color: $color-grey-hover;
-        color: $color-main;
+    &::before {
+        content: "";
+        float: left;
+        background: url(../img/ribon.png) no-repeat left bottom;
+        width: 5px;
+        height: 51px;
+        position: absolute;
+        left: 0;
     }
 }

@@ -1,0 +1,60 @@
+header {
+    background: #fff url(../img/bg01.jpg) repeat-x left top;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    &.bottom0 { margin-bottom: 0px }
+    .container {
+        background: #f4f4f4 url(../img/bg02.jpg) repeat-x left top;
+        height: 41px;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        &:before {
+            display: table;
+            content: "";
+            background: #f4f4f4 url(../img/bg-left.jpg) no-repeat left top;
+            width: 47px;
+            height: 41px;
+            float: left;
+        }
+        &:after {
+            display: table;
+            content: "";
+            background: #f4f4f4 url(../img/bg-right.jpg) no-repeat right top;
+            width: 47px;
+            height: 41px;
+            float: right;
+        }
+        .navbar-nav {
+            float: left;
+            margin-top: 0px;
+            li {
+                padding: 0 30px;
+                float: left;
+                display: block;
+                background: url(../img/line.jpg) no-repeat right center;
+                 a {
+                     @include RobotoRegular(13px);
+                     color: $color-white;
+                     padding: 0 3px;
+                     line-height: 40px;
+                     color: #fff;
+                     text-decoration: none;
+                     font-family: arial;
+                     @include animate(0.3s);
+                     &:hover {
+                         color: $color-grey1;
+                     }
+                 }
+                 &:last-child {
+                     background: none;
+                 }
+            }
+         }
+    }
+}
+footer {
+    clear: both;
+}

@@ -5,9 +5,8 @@ body {
   margin: 0;
   padding: 0;
   color: $color-main;
-  
+  @include RobotoRegular (16px);
   min-width: $minwidth;
-
 }
 /*body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
@@ -49,6 +48,9 @@ h6 {
 }
 
 p {
-  font-size: $font-content;
-  line-height: 1.5;
+   @include RobotoRegular (16px,1.5);
+}
+ul, li {
+    margin: 0;
+    padding: 0;
 }

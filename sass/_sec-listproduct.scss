@@ -1,0 +1,66 @@
+/*==================sec-hotproduct=======================*/
+ .sec-listproduct{
+     clear: both;
+     position: relative;
+     padding-top: 20px;
+     .title-lable {
+         clear: both;
+     }
+     .content {
+         clear: both;
+         padding: 1%;
+     }
+     .item-product {
+         border-bottom: 1px #dedbdb solid;
+         clear: both;
+         overflow: hidden;
+         padding: 20px 0;
+         .img-view {
+             float: left;
+             background: #f1f0f0;
+             border: 1px #dedbdb solid;
+             @include boderRadius(5px);
+             padding: 10px;
+             margin-right: 25px;
+             img {
+                 max-width: 100%;
+                 display: block;
+             }
+         }
+         .info {
+             float: left;
+             h5 {
+                 @include RobotoBold(18px);
+                 margin: 0;
+                 padding: 10px 0;
+             }
+             p {}
+             .text01 {
+                 clear: both;
+                 display: block;
+             }
+             .text02 {
+                 clear: both;
+                 padding: 15px 0;
+                 span {
+                     display: block;
+                     &:first-child {
+                         color: red;
+                     }
+                     b {
+                         color: $color-main;
+                     }
+                 }
+             }
+             .text03 {
+                 clear: both;
+                 span {
+                     float: left;
+                     &.line {
+                         margin: 0px 20px;
+                     }
+                 }
+             }
+         }
+     }
+ }

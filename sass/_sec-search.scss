@@ -1,40 +1,71 @@
 .sec-search {
-	.col-sm-2 { 
-		width: 20% ; 
-		float: left; 
-		padding: 0px 15px;
-			button {
-				@include button_blue ;
-				text-align: left;
-				@include RobotoRegular (15px, 1.5) ;
-				&:before {
-					content: "";
-		            background: #379201 url(../img/item.png) no-repeat left center;
-		            width: 20px;
-		            height: 20px;
-		            float: left;
-		            margin-right: 12px;
-				}
+	clear: both;
+	.col-sm-2 {
+		width: 20% ;
+		float: left;
+		padding: 0px 1%;
+		button {
+			@include button_blue() ;
+			@include shadow();
+			
 		}
 	}
 	.col-sm-8 {
-		width: 60%; 
+		width: 58%;
 		float: left;
-		padding: 0px 15px;
+		padding: 0px  0px;
 		button {
-			@include button_blue(auto, 35px);
+			@include button_blue(auto, 42px);
 			text-align: center;
-			@include RobotoRegular (15px) ;
+			@include RobotoRegular (18px) ;
 			@include boderRadius (20px) ;
-			padding: 5px 24px;
+			padding: 5px 40px;
 			margin: 9px auto;
 			border: none;
+			&:before {
+				display: none;
+			}
 		}
 	}
 	.input_sec {
-	    @include inputstyle( 47%);
+	    @include inputstyle( 92%);
 	    margin: 1%;
-	    @include RobotoRegularItalic (15px) ;
+	}
+	.selectbox {
+		width: 50%;
+		float: left;
+		position: relative;
+		padding: 6px 0;
+		.input_sec {
+			background: url(../img/arrow.png) no-repeat right 10px center;
+		}
+		&.none {
+			.input_sec {
+				background: none;
+			}
+		}
+		.list {
+			position: absolute;
+			width: 96%;
+			left: 0;
+    		top: 52px;
+			background-color:rgba(0, 0, 0, 0.6);
+			@include boderRadius (6px);
+			border: 1px $color-grey solid;
+			margin: 0px 1%;
+			display: none;
+			overflow: hidden;
+			z-index: 11;
+			span {
+				display: block;
+				@include RobotoRegular (15px) ;
+				color: $color-white;
+				padding: 8px 15px;
+				&:hover {
+					background-color:#4d4d4c;
+				}
+			}
+		}
 	}
 	.support {
 		@include bg_gradient(#faea7a, #fffead);
@@ -43,40 +74,45 @@
 		border: 1px #dfdfdf solid;
 		position: relative;
 		.bg_support{
-			position: absolute;
-			bottom: 0;
-			img {
-				vertical-align: bottom;
-			}
-		}
-		.detail {
-			padding: 5px 0px 0px;
-			display: table;
-			width: 100%;
-			&:last-child {
-				padding-bottom: 5px;
-			}
-			.bg_phone_number{
-				background: url(../img/phone_number.png) no-repeat left center;
-				width: 108px;
-				height: 23px;
-				text-align: center;
-				display: table-cell;
-    			vertical-align: middle;
-				span {
-					color: #f68c83;
-					@include RobotoRegular (15px, 1.5) ;
-					letter-spacing: 1.5px;
-
+			background: url(../img/bg_support.png) no-repeat left bottom;
+			padding: 10px 0;
+			.detail {
+				padding: 5px 0px 0px;
+				display: table;
+				width: 100%;
+				&:last-child {
+					padding-bottom: 5px;
 				}
-			}
-			span {
-				@include RobotoRegular (16px, 1.5) ;
-				color: $color-red;
-				&.left_text {
-					color: #000;
+				img {
 					float: left;
 					margin-right: 15px;
+				}
+				article {
+					float: left;
+				}
+				.bg_phone_number{
+					background: url(../img/phone_number.png) no-repeat left center;
+					width: 108px;
+					height: 23px;
+					text-align: center;
+					display: table-cell;
+	    			vertical-align: middle;
+					margin-top: 6px;
+					span {
+						color: #f80707;
+						@include RobotoBold (15px, 1.5) ;
+						letter-spacing: 1.5px;
+
+					}
+				}
+				span {
+					@include RobotoRegular (16px, 1.5) ;
+					color: $color-red;
+					&.left_text {
+						color: #000;
+						float: left;
+						margin-right: 15px;
+					}
 				}
 			}
 		}

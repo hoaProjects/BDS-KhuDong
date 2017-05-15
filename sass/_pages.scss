@@ -18,91 +18,14 @@ body.Bds-Page {
 .Bds-Page  {
      clear: both;
      /*==========================header=========================*/
-     header {
-        .navbar-default {
-            background: #fff url(../img/bg.png) repeat-x left top;
-            background-color: #fff;
-            width: 100%;
-            height: 50px;
-            
-            &.bottom0 { margin-bottom: 0px }
-            
-            .container {
-                background: #f4f4f4 url(../img/bg05.png) repeat-x left top;
-                height: 41px;
-                padding-right: 0px;
-                padding-left: 0px;
-                margin-right: auto;
-                margin-left: auto;
-                &:before {
-                    display: table;
-                    content: "";
-                    background: #f4f4f4 url(../img/bg02.png) no-repeat left top;
-                    width: 40px;
-                    height: 41px;
-                    float: left;
-                }
-                &:after {
-                    display: table;
-                    content: "";
-                    background: #f4f4f4 url(../img/bg03.png) no-repeat right top;
-                    width: 39px;
-                    height: 41px;
-                    float: right;
-                }
-                .navbar-nav {
-                    float: left; 
-                    margin-top: 0px;
-                    li {
-                        padding: 0 15px;
-                        float: left;
-                        display: block;
-                        background: url(../img/line.png) no-repeat right center;
-                         a {
-                             /*@include nivea_boldtext(15px);*/
-                             color: $color-white;
-                             padding: 0 3px;
-                             line-height: 40px;
-                             color: #fff;
-                             text-decoration: none;
-                             font-family: arial;
-                         }
-                    }
-                 }
-            }
 
-        }
-     }
-     .navbar {
-         border-radius: 0;
-
-     }
-     .navbar-header {
-         margin-right: 11%;
-     }
-     .navbar-brand {
-         height: auto;
-         padding-top: 8px;
-         margin-right: 20%;
-     }
      /*===============================================*/
      .sec-participe {
          clear: both;
          background: #f0f4f9;
      }
      /*=======================Footer========================*/
-     footer {
-         h4 {
-            color: $color-red;
-            text-align: left;
-         }
-         p{
-            font-size: 14px;
-            line-height: 1;
-            padding: 5px 0;
-            color: #000;
-         }
-     }
+     
      .bg-grey {
         background-color: $color-grey;
         .row {

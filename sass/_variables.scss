@@ -1,8 +1,9 @@
 /*COLOR*/
 $color-white: #fff;
 $color-red: #b61a34;
-$color-main: #352c8f;
+$color-main: #333333;
 $color-grey: #f0f0f0;
+$color-grey1: #cccccc;
 $color-grey-hover: #dad9d9;
 $color-blue-hover: #3125a2;
 $color-border: #b89d6a;
@@ -14,21 +15,34 @@ $color-borderline2: #d9d9d9;
 	@return #{$size / 13px}em;
 }
 /*=====================*/
-@mixin buttonstyle ( $width:327px, $color:#f0f0f0) {
-	color: $color-main;
-	background: $color;
-	border: 1px #dfdfdf solid;
-	@include boderRadius(7px);
-	height: 40px;
-	font-size: 18.16px;
-	font-weight: 700;
-	width: $width;
-	text-transform: uppercase;
-	display: inline-block;
-	text-align: center;
-	text-decoration: none;
-	line-height: 40px;
-}
+@mixin button_blue ($width:100%, $height: 46px){
+	@include bg_gradient(#379201, #4faa02);
+    height: $height;
+    line-height: auto;
+    display: block;
+    padding: 0px 12px;
+    color: #fff;
+    margin: 9px 0;
+	outline: none;
+	border: none;
+    width: $width;
+	@include animate(0.3s);
+	text-align: left;
+	@include RobotoRegular (16px, 1.5) ;
+	@include boderRadius(6px);
+	&:before {
+		content: "";
+		background: #379201 url(../img/item.png) no-repeat left center;
+		width: 20px;
+		height: 20px;
+		float: left;
+		margin-right: 12px;
+		margin-top: 2px;
+	}
+	&:hover {
+		opacity: 0.8;
+	}
+ }
 @mixin inputstyle ($width:98%) {
 	color: #fafafa;
 	width: $width;
@@ -38,10 +52,10 @@ $color-borderline2: #d9d9d9;
 	height: 41px;
 	font-size: 16px;
 	font-weight: 400;
-	padding: 0px 8px;
+	padding: 0px 1%;
 	outline: none;
 	color: $color-main;
-
+	@include RobotoRegular (15px) ;
 }
 /*===================
 MIXIN=====================*/
@@ -148,17 +162,7 @@ MIXIN=====================*/
                                   not supported by any browser */
 }
 
-@mixin button_blue ($width:98%, $height: 46px){
-	@include bg_gradient(#379201, #4faa02);
-    border-radius: 5px;
-    height: $height;
-    line-height: auto;
-    display: block;
-    padding: 0px 12px;
-    color: #fff;
-    margin: 9px 0;
-    width: $width;
- }
+
  @mixin bg_gradient ($color1: #fff , $color2 : #fff) {
  	background: $color1 ; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, $color1, $color2); /* For Safari 5.1 to 6.0 */
@@ -168,4 +172,9 @@ MIXIN=====================*/
 }
 @mixin skewText {
 
+}
+@mixin shadow($w:2px, $color: #2d761f) {
+	-moz-box-shadow: $w $w $w $color;
+	-webkit-box-shadow: $w $w $w $color;
+	box-shadow: $w $w $w $color;
 }
