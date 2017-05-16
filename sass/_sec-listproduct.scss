@@ -131,8 +131,12 @@
 
          .item-product{
              .img-view {
-                 width: 90%;
-                 margin:  0 auto;
+                 width: 80%;
+                 margin: 0 auto;
+                 float: none;
+                 img {
+                     width: 100%;
+                 }
              }
              .info {
                  width: 100%;
