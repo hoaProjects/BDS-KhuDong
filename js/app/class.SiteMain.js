@@ -88,12 +88,6 @@ var SiteMain = (function() {
 	}
 	function menu(){
 		$('.topMobile .icon').click(function(e){
-			// if(!$(this).hasClass('active')) {
-			// 	$('header .container .navbar-nav').slideDown();
-			// }
-			// else {
-			// 	$('header .container .navbar-nav').slideUp();
-			// }
 			$('header .container .navbar-nav').toggle();
 		})
 
